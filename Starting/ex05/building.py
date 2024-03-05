@@ -31,6 +31,7 @@ def main():
         assert len(sys.argv) <= 2, "more than one argument is provided"
     except AssertionError as msg:
         print(f"AssertionError: {msg}")
+        return
     if len(sys.argv) < 2:
         text = manage_input()
     else:

@@ -2,6 +2,9 @@ import sys
 
 
 def can_convert_to_int(s: str) -> bool:
+    """
+    Checks if the str passed as argument can be cast as an 'int'.
+    """
     try:
         int(s)
         return True
@@ -11,7 +14,7 @@ def can_convert_to_int(s: str) -> bool:
 
 try:
     assert len(sys.argv) <= 2, "more than one argument is provided"
-    assert can_convert_to_int(sys.argv[1]), "argument is no t an integer"
+    assert can_convert_to_int(sys.argv[1]), "argument is not an integer"
 
     x = int(sys.argv[1])
 
@@ -23,4 +26,4 @@ try:
 except AssertionError as msg:
     print(f"Assertion error: {msg}")
 except IndexError:
-    ''''''
+    pass

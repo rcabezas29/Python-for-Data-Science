@@ -6,8 +6,4 @@ def ft_filter(f, it) -> object:
     function(item) is true. If function is None, return the items
     that are true.
     """
-    ret = []
-    for i in it:
-        if f(i):
-            ret.append(i)
-    return ret
+    return [x for x in it if f(x)]

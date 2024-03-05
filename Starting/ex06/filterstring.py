@@ -14,18 +14,11 @@ def can_convert_to_int(s: str) -> bool:
         return False
 
 
-def length_is_greater_than(s: str, n: int = 5) -> bool:
+def longer_than(s: str, n: int = 5) -> bool:
     """
     Checks if a str is at least n length.
     """
     return len(s) >= n
-
-
-def aux_func(x):
-    """
-    Aux function in order that reduces function to one parameter
-    """
-    return length_is_greater_than(x, int(sys.argv[2]))
 
 
 def main():
@@ -47,7 +40,7 @@ def main():
         assert len(sys.argv) == 3, "the arguments are bad"
         assert can_convert_to_int(sys.argv[2]), "the arguments are bad"
         words = sys.argv[1].split(' ')
-        a = ft_filter(aux_func, words)
+        a = ft_filter(lambda x: longer_than(x, int(sys.argv[2])), words)
         print(a)
     except AssertionError as msg:
         print(f"AssertionError: {msg}")
