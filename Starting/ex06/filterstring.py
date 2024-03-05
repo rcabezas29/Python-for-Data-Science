@@ -18,7 +18,7 @@ def longer_than(s: str, n: int = 5) -> bool:
     """
     Checks if a str is at least n length.
     """
-    return len(s) >= n
+    return len(s) > n
 
 
 def main():

@@ -52,7 +52,7 @@ def main():
     print(f'{u} upper letters')
     print(f'{l} lower letters')
     print(f'{p} punctuation marks')
-    print(f'{s} space(s)')
+    print(f'{s} spaces')
     print(f'{d} digits')
 
 
