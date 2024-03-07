@@ -45,10 +45,6 @@ def ft_grey(array) -> np.array:
     Applies a grey scale filter to the image received.
     """
     g = array.copy()
-    for row in g:
-        for col in row:
-            grey = col.sum() / 3
-            col[0] = grey
-            col[1] = grey
-            col[2] = grey
+    g[:, :, 0] = g[:, :, 1]
+    g[:, :, 2] = g[:, :, 1]
     return g
