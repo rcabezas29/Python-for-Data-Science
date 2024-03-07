@@ -10,7 +10,7 @@ def give_bmi(
     try:
         assert len(height) == len(weight), "Lists must be the same size"
         assert len(height) > 0, "Not a valid list size"
-        for i, j in height, weight:
+        for i, j in zip(height, weight):
             assert i > 0, "Invalid height in list"
             assert j > 0, "Invalid weight in list"
         return [b / a**2 for a, b in zip(height, weight)]

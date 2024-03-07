@@ -8,6 +8,7 @@ def ft_rotate(arr: np.ndarray) -> np.ndarray:
     Rotates an array transposed
     """
     assert isinstance(arr, np.ndarray), "ft_slice - Not an array"
+    assert arr.ndim >= 2, "Invalid array to rotate"
     print(f"New shape after Transpose: {arr.shape}")
     return np.asarray(
             [
