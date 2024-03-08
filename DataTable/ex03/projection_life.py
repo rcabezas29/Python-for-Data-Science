@@ -12,15 +12,23 @@ def main():
         )
     df2 = load('../dfs/life_expectancy_years.csv')
 
-    incomes = df1['1900']
-    le = df2['1900']
-
-    plt.scatter(incomes, le)
-    plt.title('1900')
-    plt.xlabel('Gross domestic product')
-    plt.ylabel('Life expectancy')
-    plt.xticks(ticks=[300, 1000, 10000], labels=['300', '1k', '10k'])
-    plt.show()
+    try:
+        incomes = df1['1900']
+        le = df2['1900']
+    except Exception:
+        print("Unable to read the data")
+        return
+    try:
+        plt.scatter(incomes, le)
+        plt.title('1900')
+        plt.xlabel('Gross domestic product')
+        plt.ylabel('Life expectancy')
+        plt.xscale("log")
+        plt.xticks(ticks=[300, 1000, 10000], labels=['300', '1k', '10k'])
+        plt.show()
+    except Exception:
+        print("Unable to plot data")
+        return
 
 
 if __name__ == "__main__":
