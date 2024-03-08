@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
 
-class   Character(ABC):
+class Character(ABC):
     """
     Absatract class for every kind of GOT character
     """
@@ -16,7 +16,7 @@ class   Character(ABC):
         self.first_name = first_name
         self.is_alive = is_alive
 
- 
+
 class Stark(Character):
     """
     Stark class - The winter is coming.
@@ -30,7 +30,7 @@ class Stark(Character):
         super().__init__(first_name=first_name, is_alive=is_alive)
         self.family_name = "Stark"
         self.house_words = "Winter is Coming"
-        
+
     def print_house_words(self):
         """
         Prints Starks house words
