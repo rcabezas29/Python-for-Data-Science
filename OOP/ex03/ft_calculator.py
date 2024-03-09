@@ -21,5 +21,9 @@ class calculator:
 
     def __truediv__(self, object) -> None:
         """"""
-        self.obj = [x / object for x in self.obj]
-        print(self.obj)
+        try:
+            assert object != 0, "Impossible divide by 0"
+            self.obj = [x / object for x in self.obj]
+            print(self.obj)
+        except AssertionError as msg:
+            print(f"AssertionError: {msg}")

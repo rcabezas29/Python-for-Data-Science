@@ -6,6 +6,9 @@ class King(Baratheon, Lannister):
     Representing the King
     """
     def __init__(self, name, alive=True):
+        """
+        Instatiates a King object
+        """
         super().__init__(name, alive)
 
     def set_eyes(self, eyes):
