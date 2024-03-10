@@ -50,7 +50,7 @@ def ft_statistics(*args, **kwargs) -> None:
         sum = 0
         for val in nums:
             sum += (val - m)**2
-        return sum / (size - 1)
+        return sum / size
 
     nums = [i for i in args]
     try:
