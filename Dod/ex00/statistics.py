@@ -20,10 +20,10 @@ def ft_statistics(*args, **kwargs) -> None:
         """
         nums.sort()
         if len(nums) % 2 == 0:
-            return nums[round(len(nums) / 2)] + \
-                nums[round(len(nums) / 2) + 1] / 2
+            return (nums[int(len(nums) / 2)] + \
+                nums[int(len(nums) / 2) + 1]) / 2
         else:
-            return nums[round(len(nums) / 2) + 1]
+            return nums[int(len(nums) / 2)]
 
     def quartiles(nums):
         """
@@ -31,8 +31,8 @@ def ft_statistics(*args, **kwargs) -> None:
         """
         nums.sort()
         ret = []
-        ret.append(nums[round(len(nums) / 4)])
-        ret.append(nums[round(len(nums) / 4) * 3])
+        ret.append(nums[int(len(nums) / 4)])
+        ret.append(nums[int(len(nums) / 4) * 3])
         return ret
 
     def standard_deviation(nums):
